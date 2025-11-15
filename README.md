@@ -87,7 +87,7 @@ Para realizar un escaneo de forma manual debemos:
 2.   En la caja de texto colocamos la URL a escanear y explorar junto el navegador a utilizar (en nuestro caso, el que hayamos configurado el proxy) y clicamos en "Launch browser".
 3.   Basta con navegar por todo el dominio web que queramos. Esta navegación, al realizar las peticiones disponibles, pasará por el proxy configurado de ZAP y este, a su vez, irá registrando cada URL con sus distintos archivos disponibles como imágenes, archivos de configuración disponibles, fuentes de letras, etc...
 4.   Una vez registrado todo, cambiaríamos el modo de "Standard mode" a "ATTACK mode". En este modo, basta con seleccionar la URL registrada anteriormente, clicar con botón derecho y realizar un escaneo activo ("Active Scan"). Con este escaneo intentará obtener todas las vulnerabilidades web posibles dentro del dominio y que ZAP tenga en su base de datos.
-5.   Para ver estos datos, podemos dirigirnos a la pestaña de "Alerts" donde estarán clasificadas por una bandera que indica el nivel de riesgo de la vulnerabilidad (Azul riesgo bajo, amarillo riesgo medio, naranja riesgo medio-alto y rojo riesgo alto).
+5.   Para ver estos datos, podemos dirigirnos a la pestaña de "Alerts" donde estarán clasificadas por una bandera que indica el nivel de riesgo de la vulnerabilidad (Azul informativas, amarillo riesgo bajo, naranja riesgo medio y rojo riesgo alto).
 6.   Una vez obtenida toda la información, podemos realizar un reporte automático con todo lo obtenido clicando en la opción "Report" en la barra de herramientas de la parte de arriba.
 
 También podemos guardar la sesión de escaneo en un archivo de ZAP Session en cualquier momento por si queremos retomarlo en otro momento.
