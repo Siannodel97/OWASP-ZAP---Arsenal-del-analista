@@ -133,7 +133,7 @@ Veamos el ejemplo con nuestra Juice Shop local:
    
 <img src="https://github.com/Siannodel97/OWASP-ZAP---Arsenal-del-analista/blob/main/Imágenes/Juice3.png" width="60%">
 
-## Para ver nuestro reporte de prueba [haga clic aquí](https://github.com/Siannodel97/OWASP-ZAP---Arsenal-del-analista/blob/main/Reporte_Prueba_JuiceShop.html)
+## Para ver nuestro reporte de prueba [haga clic aquí](https://Siannodel97.github.io/OWASP-ZAP---Arsenal-del-analista/Reporte_Prueba_JuiceShop.html)
 
 
 ![Reporte de prueba imagen](https://github.com/Siannodel97/OWASP-ZAP---Arsenal-del-analista/blob/main/Imágenes/Juice4.png)
