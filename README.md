@@ -1,11 +1,10 @@
 # Herramienta OWASP ZAP 🕷️
 
----
 
 OWASP Zed Attack Proxy (También conocido como ZAP) se trata de un proxy-interceptro y escáner de seguridad web open source mantenido por OWASP. Esta herramienta está creada tanto para la exploración manual como para automatización (scripts, API, CI). Es capaz de detectar multitud de problemas de seguridad web como son las inyecciones, XSS, problemas con las cookies y encabezados, etc... Además, provee de herramientas como spidering, active scanning, interceptación de tráfico, fuzzing y una API REST.
 
 ## ¿Qué encontraremos en este recurso? 📃✏️
----
+
 
 *  Instalación y configuración ZAP (GUI y Docker).
 *  Instalación de un sitio web de prueba local (OWASP Juice Shop).
@@ -19,7 +18,7 @@ OWASP Zed Attack Proxy (También conocido como ZAP) se trata de un proxy-interce
 *  Sitio de prueba recomendado: OWASP Juice Shop. Se trata de una aplicación intencionalmente vulnerable con ejercicios y retos. Este puede ejecutarse localmente mediante Docker.
 
 # Instalación ➡️
----
+
 
 ## OWASP ZAP
 
@@ -35,16 +34,14 @@ Acto seguido, instalar y lanzar ZAP. La primera vez pedirá aceptar políticas y
 
 
 2.   Método APT / repositorios (SO como Debian, Ubuntu o Kali)
-"""
-
+```
 sudo apt update
 sudo apt install zaproxy
-
-"""## OWASP Juice Shop
+```
+## OWASP Juice Shop
 
 Para instalar el sitio de prueba OWASP Juice Shop, el sitio de prueba local, utilizaremos Docker:
-"""
-
+```
 # Tenemos que instalar/actualizar docker y docker compose
 sudo apt update
 sudo apt install -y docker.io docker-compose
@@ -54,26 +51,23 @@ sudo systemctl enable --now docker
 sudo docker pull bkimminich/juice-shop
 sudo docker run --rm -p 3000:3000 bkimminich/juice-shop
 # Se puede acceder en http://localhost:3000
-
-"""En el caso de que se quisiese cerrar el servicio docker de Juice Shop bastaría con hacer Ctrl + C en la consola donde se ha iniciado el servicio o utilizar:"""
-
+```
+En el caso de que se quisiese cerrar el servicio docker de Juice Shop bastaría con hacer Ctrl + C en la consola donde se ha iniciado el servicio o utilizar:
+````
 sudo docker stop juice
 # Si no se ha usado --rm anteriormente, para borrarlo
 sudo docker rm <ID_CONTAINER>
 # Para saber el ID del contenedor se puede utilizar el siguiente comando para ver los contenedores activos
 sudo docker ps
+````
+# Inicio y uso básico de ZAP: Escaneo manual y automático 🕸️
 
-"""# Inicio y uso básico de ZAP: Escaneo manual y automático 🕸️
----
 
 Lo primero de todo será iniciar ZAP, ya sea desde su ejecutable o mediante el comando
-
-
-"""
-
+````
 zaproxy
-
-"""Cuando se inicia ZAP, nos preguntará si deseamos que la sesión que empecemos se mantenga activa. Podremos elegir que si con nombre personalizado y localización que deseemos o automático, o el caso de que no queramos que se guarde la sesión(Podemos pedirle que recuerde nuestra opción en la y no pregunte más).
+````
+Cuando se inicia ZAP, nos preguntará si deseamos que la sesión que empecemos se mantenga activa. Podremos elegir que si con nombre personalizado y localización que deseemos o automático, o el caso de que no queramos que se guarde la sesión(Podemos pedirle que recuerde nuestra opción en la y no pregunte más).
 
 Puede dar la posibilidad de que, al iniciar por primera vez o tras un tiempo sin usarlo, que nos pida actualizar los addons. Podemos seleccionar los que queramos o seleccionarlos todos.
 
@@ -84,7 +78,7 @@ En el navegador que utilicemos (Chrome, Firefox, etc...) tenemos que configurar 
 Tras ello, deberemos iniciar nuestro entorno local de pruebas si no lo hemos realizado antes. (Ver el apartado anterior sobre Juice-Shop)
 
 ## Realización de un escaneo manual 🔍🕵️‍♀️
----
+
 
 Para realizar un escaneo de forma manual debemos:
 
@@ -99,7 +93,7 @@ Para realizar un escaneo de forma manual debemos:
 También podemos guardar la sesión de escaneo en un archivo de ZAP Session en cualquier momento por si queremos retomarlo en otro momento.
 
 ## Realización de un escaneo automático 💻🕷️
----
+
 
 Esta opción es más rápida y bastante completa para lo simple que es. Se basa en módulos Spider. Los Spider exploran y descubren automáticamente las páginas, rutas y recursos de un sitio web navegando del mismo modo que lo haría un usuario o un bot, siguiendo enlaces, formularios y rutas accesibles con el objetivo de construir un mapa completo de las URLs del dominio junto los parámetros y recursos que existen en este. En ZAP tenemos dos tipos de Spider:
 *   Spider tradicional: Sin manejar JavaScript, un escaneo rápido basado en HTML estático ideal para webs tradicionales.
@@ -125,11 +119,11 @@ Para finalizar, también podemos tanto realizar el reporte como guardar la sesi�
 
 # Ejemplo práctico con Juice Shop local 🍹
 
----
+
 Veamos el ejemplo con nuestra Juice Shop local:
 1.   Primero ejecutaremos nuestro Juice Shop con Docker tal y como explicamos en el apartado de instalación.
 
 2.   Con ZAP abierto y configurado ya, vamos a realizar un escaneo automático escogiendo Spider AJAX.
 
 3.   Una vez escaneado la Juice Shop local, realizaremos el Active Scan para encontrar las vulnerabilidades y generaremos un reporte de estas.
-"""
+
