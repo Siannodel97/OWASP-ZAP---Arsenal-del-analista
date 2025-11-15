@@ -123,7 +123,18 @@ Para finalizar, también podemos tanto realizar el reporte como guardar la sesi�
 Veamos el ejemplo con nuestra Juice Shop local:
 1.   Primero ejecutaremos nuestro Juice Shop con Docker tal y como explicamos en el apartado de instalación.
 
+<img src="https://github.com/Siannodel97/OWASP-ZAP---Arsenal-del-analista/blob/main/Imágenes/Juice1.png" width="60%">
+
 2.   Con ZAP abierto y configurado ya, vamos a realizar un escaneo automático escogiendo Spider AJAX.
+   
+<img src="https://github.com/Siannodel97/OWASP-ZAP---Arsenal-del-analista/blob/main/Imágenes/Juice2.png" width="60%">
 
 3.   Una vez escaneado la Juice Shop local, realizaremos el Active Scan para encontrar las vulnerabilidades y generaremos un reporte de estas.
+   
+<img src="https://github.com/Siannodel97/OWASP-ZAP---Arsenal-del-analista/blob/main/Imágenes/Juice3.png" width="60%">
+
+## Para ver nuestro reporte de prueba [haga clic aquí](https://github.com/Siannodel97/OWASP-ZAP---Arsenal-del-analista/blob/main/Reporte_Prueba_JuiceShop.html)
+
+
+![Reporte de prueba imagen](https://github.com/Siannodel97/OWASP-ZAP---Arsenal-del-analista/blob/main/Imágenes/Juice4.png)
 
